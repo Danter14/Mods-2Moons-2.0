@@ -8,7 +8,6 @@ Lists of Mods that I created with a follow-up of development
 2Moons 2.0 Mods by Danter14
 
 ## Listes des Mods Terminer - Complete Mod Lists
-```
 - [x] Bonus V1.0
 - [x] Banque - Bank V1.0
 - [x] Recher débris - Finds debris V1.0
@@ -18,18 +17,13 @@ Lists of Mods that I created with a follow-up of development
 - [x] Astéroïdes - Asteroids V1.0
 - [x] Tournois - Tournaments V1.0
 - [x] Loterie - Lottery V1.0
-```
 
 ## Listes des Mods en cours - Current Mods Lists
-```
 - [ ] Quêtes - Quests V1.0 - Part 1
-```
 
 ## Listes des Mods à venir - Upcoming Mod Lists
-```
 - [ ] Boutique extention - Shop extention V1.0
 - [ ] Race V1.0
-```
 
 # Installation des mods - Installing mods
 ```
