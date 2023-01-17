@@ -2,7 +2,7 @@
 {block name="content"}
 
 <!--
- * @mods Bank
+ * @mods Extra Moon
  * @version 1.0
  * @author Danter14
  * @licence MIT
