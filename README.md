@@ -10,10 +10,10 @@ Lists of Mods that I created with a follow-up of development
 ## Listes des Mods Terminer - Complete Mod Lists
 - [x] Bonus V1.0
 - [x] Banque - Bank V1.0
-- [x] Recher débris - Finds debris V1.0
-- [x] Acaht lune - Buy Moon V1.0
-- [x] achat nouvelle planète - Buy Extra Planet V1.0
-- [x] Boutique et rédution temps de vol - Shop and Fleet Reduc Time V1.0
+- [x] Recherche débris - Finds debris V1.0
+- [x] Achat lune - Buy Moon V1.0
+- [x] Achat nouvelle planète - Buy Extra Planet V1.0
+- [x] Boutique et réduction temps de vol - Shop and Fleet Reduc Time V1.0
 - [x] Astéroïdes - Asteroids V1.0
 - [x] Tournois - Tournaments V1.0
 - [x] Loterie - Lottery V1.0
@@ -23,7 +23,7 @@ Lists of Mods that I created with a follow-up of development
 
 ## Listes des Mods à venir - Upcoming Mod Lists
 - [ ] Boutique extention - Shop extention V1.0
-- [ ] Race V1.0
+- [ ] Races V1.0
 
 # Installation des mods - Installing mods
 ```

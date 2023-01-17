@@ -1,0 +1,12 @@
+<!--
+ * @mods Bank
+ * @version 1.0
+ * @author Danter14
+ * @licence MIT
+ * @package 2Moons
+ * @version 1.8 - 1.9 - 2.0
+ -->
+
+Search Line 36 : <i class="far fa-moon"></i> {$LNG.ov_create_moon}
+
+Replace by <a href="game.php?page=moonbuy"><i class="far fa-moon"></i> {$LNG.ov_create_moon}</a>
