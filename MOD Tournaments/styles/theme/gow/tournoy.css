@@ -1,0 +1,246 @@
+#achivment{
+	margin: 0 auto;
+	width: 706px;
+}
+
+#achivment .ach_main_block{
+	border: 1px solid #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 714px;
+	background:rgba(0, 0, 0, 0.8);
+	overflow:hidden;
+	box-shadow: inset 0 1px 1px rgb(87, 88, 89), inset 0 -1px 0px rgba(63, 59, 113, 0.2), 0 9px 16px 0 rgba(0, 0, 0, 0.3), 0 4px 3px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px #040f1f;
+}
+
+#achivment .messaggi_main_block{
+	border: 1px solid #000000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	width: 714px;
+	background:rgba(0, 0, 0, 0.3);
+	overflow:hidden;
+}
+
+#achivment .ach_head{
+	background-color: #28292a;
+	border-bottom: 1px solid #000000;
+	border-top-left-radius: 4px;
+	border-top-right-radius:4px;
+	width: 100%;
+	height:27px;
+	line-height:27px;	
+}
+
+.ach_head .ach_head_p{
+	margin-left:20px;
+	float:left;	
+}
+
+.ach_head_right{
+	float:right;
+	line-height:25px;
+	height:25px;
+	padding-top:2px;
+	padding-right:5px;
+	margin-right:5px;
+}
+
+.ach_head_right span{
+	color:#fff;	
+	margin-left:4px;
+}
+
+.ach_menu {
+    width: 176px;
+	float:left;
+}
+ 
+.ach_menu ul{
+	padding:0px;
+	margin:0;
+}
+ 
+.ach_menu li {
+    height: 38px;	
+	list-style-type:none;
+	cursor:pointer;
+	width:176px;
+}  
+
+.ach_menu li a {
+    line-height: 36px;
+	height:36px;
+    text-decoration: none;
+	padding-left:20px;
+	color:#666666;
+	display:block;
+	width:155px;
+	/*border-bottom:1px #000 solid;
+	border-top:1px #020c18 solid;*/
+}  
+
+.ach_menu li:hover a{
+    color: #FFFFFF;
+} 
+
+/*.ach_menu li.enable {   
+	background:rgba(0, 0, 0, 0.1);
+	padding-right:10px;
+}*/
+
+.ach_menu li.enable a {
+    color: #FFFFFF;
+	cursor:default;
+	border-top:0;
+	padding-top:1px;
+	font-size: 1.2em;
+	font-weight: bold;
+	background:rgba(0, 0, 0, 0.3);
+}
+
+.ach_content{
+	margin:0 14px 7px 14px;
+	border:1px #000 solid;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background:rgba(0, 0, 0, 0.3);
+	padding-bottom:10px;
+	position:relative;
+	overflow:hidden;
+}
+
+.ach_content_box{
+	margin-left:177px;
+	padding-top:14px;
+}
+
+.ach_content .ach_img{
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	width:100px;
+	overflow:hidden;
+	text-align:center;
+}
+
+.ach_content .ach_img img{
+	max-width:100%;
+}
+
+.ach_content .ach_content_text{
+	margin-left:120px;
+	margin-right: 10px;
+}
+
+.ach_content_text .ach_text_head{
+	color:#FFF;
+	font-weight:bold;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.ach_content_box .stars_2{
+	position:absolute;
+	right:10px;
+	top:7px;
+	padding-left:17px;
+	padding-top:2px;
+	line-height:14px;
+	color:#fff;
+}
+
+.ach_content_text .ach_text_boby{
+	color:red;
+	line-height:15px;
+	
+}
+
+.ach_content_text .ach_text_need{
+	color:#666666;
+	line-height:20px;
+	margin-top:7px;
+}
+
+.ach_attr{
+	float:left;
+	margin-left:-10px;	
+}
+
+.ach_attr_achiv {
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.ach_attr_achiv img{
+	height:55px;
+	width:auto;
+}
+
+.ach_attr_achiv span{
+	color:#FFF;
+	position:absolute;
+	margin-left: 63px;
+	margin-top: 35px;	
+}
+
+.ach_attr_build {
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+.ach_attr_build img{
+	height:55px;
+	width:auto;
+}
+
+.ach_attr_build span{
+	color:#FFF;
+	position:absolute;
+	margin-left: 37px;
+	margin-top: 35px;
+}
+
+span.achiev_mes_head{
+	font-weight:bold;
+	color:#846728;
+}
+
+.ach_next_info{
+	position:absolute;
+	right:0;
+	bottom:0;
+	font-size:10px;
+	padding:3px 6px;
+	color:#fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background:#28292a;
+	cursor:help !important;
+	z-index:2;
+}
+
+.ach_next_info_line{
+	position:absolute;
+	left:0;
+	bottom:0;
+	height:4px;
+	color:#666;
+	-moz-border-radius: 0px 0px 2px 0px;
+	-webkit-border-radius: 0px 0px 0px 2px;
+	border-radius: 0px 0px 0px 2px;
+	background:#28292a;
+	z-index:1;
+	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.tournoi_img {
+	width: 60px;
+}
