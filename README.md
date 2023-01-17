@@ -19,7 +19,7 @@ Lists of Mods that I created with a follow-up of development
 - [x] Loterie - Lottery V1.0
 
 ## Listes des Mods en cours - Current Mods Lists
-- [ ] Quêtes - Quests V1.0 - Part 1
+- [ ] Quêtes - Quests V1.0
 
 ## Listes des Mods à venir - Upcoming Mod Lists
 - [ ] Boutique extention - Shop extention V1.0
