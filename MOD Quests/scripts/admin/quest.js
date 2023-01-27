@@ -36,6 +36,20 @@ window.onload = function(){
         const formData = $(this).serialize();
         editCategorie(formData);
     });
+
+    $(document).on('submit','#addQuest',function(e)
+    {
+        e.preventDefault();
+        const formData = $(this).serialize();
+        addonQuest(formData);
+    });
+
+    $(document).on('submit','#editQuest',function(e)
+    {
+        e.preventDefault();
+        const formData = $(this).serialize();
+        editQuest(formData);
+    });
 }
 
 /**
@@ -141,6 +155,118 @@ function deleteCategorie(idCat) {
         success: function(data) {
             data = jQuery.parseJSON(data);
             $('#cat_'+idCat).remove();
+            NotifyBoxAdm(data.alert, data.message);
+        },
+        error: function(error) {
+            alert(error.responseText);
+        }
+    });
+}
+
+/**
+ * Ouverture de la modal pour l'édition d'une Quêtes
+ */
+function modalQuest(questID) {
+    $('body').append('<div style="" id="loadingDiv"><div class="loader">Loading...</div></div>');
+    $.ajax({
+        type:"GET",
+        data : "questID="+questID,
+        url:"admin.php?page=quests&action=modal_quest",
+        success: function(data) {
+            data = jQuery.parseJSON(data);
+            $( "#loadingDiv" ).fadeOut(500, function() {
+                $( "#loadingDiv" ).remove();
+            });
+            $(".modal_popup_quest").addClass("active");
+            $("#title_quest").fadeIn(1000).html("Edition de la quête "+data[0].quest_title);
+            $("#hidden_quest").val(data[0].questsID);
+            if(data[0].quest_actif == 1) $("#actif_quete_modal").prop('checked', true);
+            $("#quest_categorie_modal option[value='"+data[0].questsCategories+"']").prop("selected", true);
+            $("#quest_title").val(data[0].quest_title);
+            $("#quest_description").val(data[0].quest_description);
+            $("#quest_obj_level").val(data[0].quest_objectif_level);
+            $("#quest_obj_modal option[value='"+data[0].quest_objectif+"']").prop("selected", true);
+            $("#quest_reward_point").val(data[0].quest_points_reward);
+            $("#quest_reward_metal").val(data[0].quest_metal_reward);
+            $("#quest_reward_crystal").val(data[0].quest_crystal_reward);
+            $("#quest_reward_deuterium").val(data[0].quest_deuterium_reward);
+            $("#quest_reward_darkmatter").val(data[0].quest_darkmatter_reward);
+            if(data[0].quest_event == 1) $("#actif_quete_event_modal").prop('checked', true);
+            $("#quest_event_time").val(data[0].quest_time_finish_event);
+        },
+        error: function(msg) {
+            $(".modal-body").addClass("tableau_msg_erreur").fadeOut(800).fadeIn(800).fadeOut(400).fadeIn(400).html('<div style="margin-right:auto; margin-left:auto; text-align:center">Impossible de charger cette page</div>');
+            $( "#loadingDiv" ).fadeOut(500, function() {
+                $( "#loadingDiv" ).remove();
+            });
+        },
+    });
+}
+
+/**
+ * Fermeture de la modal Quête
+ */
+function modalQuestClose() {
+    $(".modal_popup_quest").removeClass("active");
+}
+
+/**
+ * Ajout d'une nouvelle quête
+ */
+function addonQuest(params) {
+    $.ajax({
+        type: "POST",
+        url: "admin.php?page=quests&action=add_quest",
+        data: params,
+        success: function (data) {
+            data = jQuery.parseJSON(data);
+            NotifyBoxAdm(data.alert, data.message);
+            if(data.alert == "success") {
+                setTimeout(function(){
+                    location.reload();
+                }, 3000);
+            }
+        },
+        error: function(error) {
+            alert(error.responseText);
+        }
+    });
+}
+
+/**
+ * Edition d'une Quêtes
+ */
+function editQuest(params) {
+    $.ajax({
+        type: "POST",
+        url: "admin.php?page=quests",
+        data: params,
+        success: function(data) {
+            data = jQuery.parseJSON(data);
+            NotifyBoxAdm(data.alert, data.message);
+            if(data.alert == "success") {
+                setTimeout(function(){
+                    location.reload();
+                },3000);
+            }
+        },
+        error: function(error) {
+            alert(error.responseText);
+        }
+    });
+}
+
+/**
+ * Suppression d'une Quêtes
+ */
+function deleteQuest(idQuest) {
+    $.ajax({
+        type: "POST",
+        url: "admin.php?page=quests&action=delete_quest",
+        data: "id="+idQuest,
+        success: function(data) {
+            data = jQuery.parseJSON(data);
+            $('#quest_'+idQuest).remove();
             NotifyBoxAdm(data.alert, data.message);
         },
         error: function(error) {
