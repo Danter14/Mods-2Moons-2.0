@@ -1,0 +1,87 @@
+/** Ajout du CSS des Quests **/
+.badge {
+	color: white;
+	padding: 4px 8px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.badge.warning {
+	background-color: #BC622A;
+}
+
+.badge.danger {
+	background-color: #AB3232;
+}
+
+.badge.success {
+	background-color: #298C2E;
+}
+
+.badge.info {
+	background-color: #29578C;
+}
+
+.quests {
+	display: flex;
+}
+
+.quests .categories ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+.quests .categories ul li {
+	padding: 20px;
+	border-left: 2px solid #FFFFFF;
+}
+
+.quests .categories ul li.actif {
+	background: #444444;
+	border-radius: 0 10px 10px 0;
+	border-left: 2px solid #178531;
+}
+
+.quests .quest_content {
+	margin-left: 20px;
+	width: 100%;
+}
+
+.quests .quest_content .label_list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.quests .quest_content .quest_list .reward {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.quests .quest_content .quest_list {
+	border-bottom: 1px solid #7E3A8A;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.quests .quest_content .quest_list .reward div {}
+
+.quests .quest_content .quest_list .reward div ul {
+	list-style: none;
+	padding: 0;
+}
+
+.quests .quest_content .quest_list .reward div button {
+	background: transparent;
+	border: 1px solid #31AB35;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.quests .quest_content .quest_list .reward div button:hover {
+	background: #217123;
+}
