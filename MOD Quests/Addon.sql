@@ -35,12 +35,12 @@ CREATE TABLE `uni1_quests_lists` (
 CREATE TABLE `uni1_quests_users` (
   `userQuestsID` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `userId` int(11) unsigned NOT NULL DEFAULT "0",
-  `questsID` varchar(255) NOT NULL DEFAULT "",
-  `quest_objectif` text,
-  `quest_objectif_level` int(11) NOT NULL DEFAULT "0",
-  `quest_objectif_level_user` int(11) NOT NULL DEFAULT "0",
-  `quest_users_accept` int(11) unsigned DEFAULT "0",
-  `quest_users_finish` int(11) unsigned DEFAULT "0",
+  `user_questsID` varchar(255) NOT NULL DEFAULT "",
+  `user_quest_objectif` text,
+  `user_quest_objectif_level` int(11) NOT NULL DEFAULT "0",
+  `user_quest_objectif_level_user` int(11) NOT NULL DEFAULT "0",
+  `user_quest_users_accept` int(11) unsigned DEFAULT "0",
+  `user_quest_users_finish` int(11) unsigned DEFAULT "0",
   PRIMARY KEY (`userQuestsID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 

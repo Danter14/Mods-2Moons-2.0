@@ -18,4 +18,5 @@ $dbTableNames	= array(
 	//MODS TABLES ADDON
 	'QUESTS_CATEGORIES'			=> DB_PREFIX.'quests_categories',
 	'QUESTS_LISTS'				=> DB_PREFIX.'quests_lists',
+	'QUESTS_USERS'				=> DB_PREFIX.'quests_users',
 );

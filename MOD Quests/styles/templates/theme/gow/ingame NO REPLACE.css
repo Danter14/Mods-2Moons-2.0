@@ -68,7 +68,12 @@
 	margin-top: 10px;
 }
 
-.quests .quest_content .quest_list .reward div {}
+/* Ajout du CSS PARTIE 5 */
+.quests .quest_content .quest_list .reward div {
+	width: 25%;
+	text-align: center;
+}
+/* Fin */
 
 .quests .quest_content .quest_list .reward div ul {
 	list-style: none;
@@ -84,4 +89,25 @@
 
 .quests .quest_content .quest_list .reward div button:hover {
 	background: #217123;
+}
+
+/** ADDON PART 5 **/
+.progresse_bar_border {
+	width: 25%;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-right: 10px;
+	overflow: hidden;
+}
+
+.progresse_bar_border .progresseBar {
+	height: 20px;
+	background-color: #04AA6D;
+	text-align: center; 
+	line-height: 20px;
+	color: white;
+}
+
+.progresse_bar_border .progresseBar span {
+	padding-left: 10px;
 }

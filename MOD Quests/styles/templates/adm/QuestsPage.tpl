@@ -6,10 +6,10 @@
 <center>
 <div id="panneau">
     <ul id="onglets" class="clearfix">
-        <li class="actif_tab">Information</li>
-        <li>Listes</li>
+		<li class="actif_tab">Information</li>
+		<li>Listes</li>
         <li>Ajouter</li>
-    </ul>
+	</ul>
     <div id="contenus">
         <div class="onglet_content">
             <h1>{$LNG.adm_quest_info_title}</h1>
