@@ -14,7 +14,7 @@ INSERT INTO `uni1_cronjobs` (`name`, `isActive`, `min`, `hours`, `dom`, `month`,
 ('Tournaments', 1, '*/5', '*', '*', '*', '*', 'TournamentCronjob', 1532144700, NULL);
 
 CREATE TABLE `uni1_tourney` (
-  `tourneyId` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `tourneyId` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `tourneyName` varchar(50) NOT NULL,
   `priceOne` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `priceTwo` int(11) UNSIGNED NOT NULL DEFAULT '0',
@@ -31,7 +31,7 @@ INSERT INTO `uni1_tourney` (`tourneyId`, `tourneyName`, `priceOne`, `priceTwo`, 
 (5, 'Epsilon', 5000, 3000, 2000, 4);
 
 CREATE TABLE `uni1_tourney_logs` (
-  `logId` int(11) UNSIGNED NOT NULL,
+  `logId` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `tourneyUnits` double(50,0) UNSIGNED NOT NULL DEFAULT '0',
   `playerId` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `joinTime` int(11) UNSIGNED NOT NULL DEFAULT '0',
@@ -40,7 +40,7 @@ CREATE TABLE `uni1_tourney_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `uni1_tourney_participante` (
-  `joinId` int(11) UNSIGNED NOT NULL,
+  `joinId` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `tourneyUnits` double(50,0) UNSIGNED NOT NULL DEFAULT '0',
   `playerId` int(11) UNSIGNED NOT NULL DEFAULT '0',
   `joinTime` int(11) UNSIGNED NOT NULL DEFAULT '0',
