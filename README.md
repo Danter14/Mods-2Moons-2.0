@@ -17,9 +17,10 @@ Lists of Mods that I created with a follow-up of development
 - [x] Astéroïdes - Asteroids V1.0
 - [x] Tournois - Tournaments V1.0
 - [x] Loterie - Lottery V1.0
+- [x] Quêtes - Quests V1.0
 
 ## Listes des Mods en cours - Current Mods Lists
-- [ ] Quêtes - Quests V1.0
+- Aucune pour le moment
 
 ## Listes des Mods à venir - Upcoming Mod Lists
 - [ ] Boutique extention - Shop extention V1.0
