@@ -2,10 +2,9 @@
 
 /**
  * @mods Asteroids
- * @version 1.0
+ * @package 2Moons
  * @author Danter14
  * @licence MIT
- * @package 2Moons
  * @version 1.8 - 1.9 - 2.0
  */
 
@@ -104,14 +103,17 @@ class MissionCaseAsteroid extends MissionFunctions implements Mission
 				 
 				// Step 5
 				$stealResource[$secondResource] 	+= min($AllCapacity, $temporary['crystal'] - $stealResource[$secondResource]);	
+
+				// Step 6
+				$stealResource[$thirdResource] 	+= min($AllCapacity, $temporary['deuterium'] - $stealResource[$thirdResource]);
 				
-				if($stealResource[$firstResource] < 0) { 
+				if($stealResource[$firstResource] <= 0) { 
 					$stealResource[$firstResource] = 0;
 				}
-				if($stealResource[$secondResource] < 0) { 
+				if($stealResource[$secondResource] <= 0) { 
 					$stealResource[$secondResource] = 0;
 				}
-				if($stealResource[$thirdResource] < 0) { 
+				if($stealResource[$thirdResource] <= 0) { 
 					$stealResource[$thirdResource] = 0;
 				}
 				
@@ -124,7 +126,7 @@ class MissionCaseAsteroid extends MissionFunctions implements Mission
 				WHERE fleet_id = :fleetId;";
 
 				$db->update($sql, array(
-				':fleetId'	=> $this->_fleet['fleet_id'],
+				':fleetId'	=> (int) $this->_fleet['fleet_id'],
 				));
 			}
 							
