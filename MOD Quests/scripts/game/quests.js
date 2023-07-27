@@ -31,7 +31,7 @@ window.onload = function() {
 function questLists(idCat) {
     $.ajax({
         type: "GET",
-        url: "game.php?page=questsajax",
+        url: "game.php?page=questsAjax",
         data: "categorie_id="+idCat,
         success: function (data) {
             data = jQuery.parseJSON(data);
@@ -56,7 +56,7 @@ function NotifyBoxAdm(color_alert, text) {
 function questConfirm(idQuest) {
     $.ajax({
         type: "POST",
-        url: "game.php?page=questsajax&mode=runQuest",
+        url: "game.php?page=questsAjax&mode=runQuest",
         data: "quest_id="+idQuest,
         success: function (data) {
             data = jQuery.parseJSON(data);
@@ -75,7 +75,7 @@ function questConfirm(idQuest) {
 function verifQuest(){
     $.ajax({
         type: "GET",
-        url: "game.php?page=questsajax&mode=verifQuest",
+        url: "game.php?page=questsAjax&mode=verifQuest",
         success: function (data) {
             data = jQuery.parseJSON(data);
             $.each(data, function(key, value) {
@@ -107,7 +107,7 @@ function verifQuest(){
 function questFinish(idQuest) {
     $.ajax({
         type: "POST",
-        url: "game.php?page=questsajax&mode=finishQuest",
+        url: "game.php?page=questsAjax&mode=finishQuest",
         data: "quest_id="+idQuest,
         success: function (data) {
             data = jQuery.parseJSON(data);
