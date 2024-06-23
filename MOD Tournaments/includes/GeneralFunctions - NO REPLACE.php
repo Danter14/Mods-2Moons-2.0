@@ -37,11 +37,13 @@
 }
 
 function getUsername(int $userId) {
-	if($userId <= 0) return;
+	if($userId <= 0) {
+		return false;
+	};
 
 	$sql = "SELECT username FROM %%USERS%% WHERE id = :userID ;";
 	$params = [":userID" => $userId];
 	$result = database::get()->selectSingle($sql, $params);
 
-	return $result;	
+	return $result["username"];
 }
