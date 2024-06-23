@@ -29,7 +29,7 @@ class ShowTourneyPage extends AbstractGamePage
 		
 		foreach($userThree as $Player){
 			$userArbre[] = array(
-				'playerName'	=> getUsername($Player['id'])['username'],
+				'playerName'	=> getUsername($Player['id']),
 				'expePoints'	=> pretty_number($Player['expeEventPoints']),
 			);
 		}
@@ -80,7 +80,7 @@ class ShowTourneyPage extends AbstractGamePage
 		foreach($tourneyPlayers as $Player){
 			$playerList[] = array(
 				'tourneyUnits'	=> $Player['tourneyUnits'],
-				'playerName'	=> getUsername($Player['playerId'])['username'],
+				'playerName'	=> getUsername($Player['playerId']),
 			);
 		}
 		
