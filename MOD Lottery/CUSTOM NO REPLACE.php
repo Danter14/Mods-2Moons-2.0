@@ -30,7 +30,6 @@ $LNG['lottery_list_participe'] = "Participants à la loterie";
 $LNG['lottery_list_participant_empty'] = "Aucun joueur n'a actuellement acheter de ticket";
 $LNG['lottery_list_win'] = "Dernier Gagnants à la loterie n°%s";
 $LNG['lottery_list_win_empty'] = "Il n'y a pas encore eu de gagnant";
-$LNG['lottery_ticket'] = "Tickets";
 $LNG['lottery_error_ticket_solde_out'] = "Tous les tickets on était vendu merci d'attendre la prochaine loterie.";
 $LNG['lottery_error_ticket_num'] = "Désolé mais vous demander trop de ticket !!!";
 $LNG['lottery_error_ticket_buy'] = "Vous pouvez encore acheter %s ticket(s) maximum.";

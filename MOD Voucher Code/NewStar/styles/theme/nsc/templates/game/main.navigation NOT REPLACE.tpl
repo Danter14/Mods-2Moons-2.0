@@ -1,0 +1,2 @@
+<a class="nuovomenusinistra" href="game.php?page=voucher" id="munu_senat">Code</a>
+<a class="nuovomenudestra tooltip" href="#" id="munu_fleetable" data-tooltip-content="Code"><img src="{$dpath}img/iconav/blackmarket.png" class="oimgaltro"></a>
