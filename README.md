@@ -20,17 +20,15 @@ Lists of Mods that I created with a follow-up of development
 - [x] Tournois - Tournaments V1.0
 - [x] Loterie - Lottery V1.0
 - [x] Quêtes - Quests V1.0
+- [x] Code coupon - Voucher code V1.0
 
 ## Listes des Mods en cours - Current Mods Lists
 
-- [ ] Code coupon - Voucher code V1.0
-  - Game
-  - Admin
+- None
 
 ## Listes des Mods à venir - Upcoming Mod Lists
 
-- [ ] Boutique extention - Shop extention V1.0
-- [ ] Races V1.0
+- None
 
 # Installation des mods - Installing mods
 
