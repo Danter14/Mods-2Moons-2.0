@@ -133,7 +133,7 @@ class ShowQuestsAjaxPage extends AbstractGamePage
     /** Confimation de la l'acceptation de la quête PART 5 */
     function fleetVol($fleetId): int
     {
-        global $LNG, $USER, $resource;
+        global $USER;
 
         $db = Database::get();
 
@@ -185,9 +185,8 @@ class ShowQuestsAjaxPage extends AbstractGamePage
                     $response["error"] = "warning";
                     $response["message"] = "La quête d'événement est terminé.";
                 } else {
-
-                    $sql_controle = "SELECT * FROM %%QUESTS_USERS%% WHERE user_questsID = :questID ;";
-                    $result_controle = $db->selectSingle($sql_controle, [":questID" => $quest_id]);
+                    $sql_controle = "SELECT * FROM %%QUESTS_USERS%% WHERE user_questsID = :questID AND userId = :id ;";
+                    $result_controle = $db->selectSingle($sql_controle, [":questID" => $quest_id, ":id" => $USER['id']]);
 
                     if ($result_controle > 1) {
                         $response["error"] = "danger";
@@ -250,11 +249,9 @@ class ShowQuestsAjaxPage extends AbstractGamePage
 
     function verifQuest()
     {
-        global $LNG, $USER, $resource;
+        global $USER, $resource;
 
         $db = Database::get();
-
-        $response = [];
 
         $sql = "SELECT * FROM %%QUESTS_USERS%% WHERE userId = :userId ;";
         $result = $db->select($sql, [":userId" => $USER['id']]);
@@ -305,7 +302,7 @@ class ShowQuestsAjaxPage extends AbstractGamePage
 
     function finishQuest()
     {
-        global $LNG, $USER, $resource, $PLANET;
+        global $USER, $resource;
 
         $db = Database::get();
 
@@ -346,7 +343,7 @@ class ShowQuestsAjaxPage extends AbstractGamePage
                 $response["badgeStyle"] = "success";
                 $response["badgeContent"] = "Terminé";
                 $response["error"] = "success";
-                $response["message"] = "Bravo c'est gagné, vous avez fini la quête. 
+                $response["message"] = "Bravo c'est gagné, vous avez fini la quête.
                 Les récompense on étais ajouter à votre compte";
             } else {
                 $response["error"] = "danger";
@@ -359,15 +356,15 @@ class ShowQuestsAjaxPage extends AbstractGamePage
 
     function rewardQuest($questID)
     {
-        global $LNG, $USER, $resource, $PLANET;
+        global $USER, $resource;
 
         $db = Database::get();
 
-        $sql = "SELECT quest_points_reward, 
-        quest_metal_reward, 
-        quest_crystal_reward, 
-        quest_deuterium_reward, 
-        quest_darkmatter_reward 
+        $sql = "SELECT quest_points_reward,
+        quest_metal_reward,
+        quest_crystal_reward,
+        quest_deuterium_reward,
+        quest_darkmatter_reward
         FROM %%QUESTS_LISTS%% WHERE questsID = :questID ;";
         $result = $db->selectSingle($sql, [":questID" => $questID]);
 
@@ -404,7 +401,7 @@ class ShowQuestsAjaxPage extends AbstractGamePage
         }
 
         $sql = "UPDATE %%QUESTS_USERS%% SET user_quest_users_finish = :user_quest_users_finish WHERE user_questsID = :questsID AND userId = :userId ;";
-        $result = $db->update($sql, [":user_quest_users_finish" => 2, ":questsID" => $questID, ":userId" => $USER['id']]);
+        $db->update($sql, [":user_quest_users_finish" => 2, ":questsID" => $questID, ":userId" => $USER['id']]);
 
         return $response;
     }

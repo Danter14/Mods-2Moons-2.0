@@ -20,7 +20,7 @@ class ShowQuestsPage extends AbstractGamePage
 
 	function show()
 	{
-		global $USER, $LNG;
+		global $LNG;
 
         $db = Database::get();
 
